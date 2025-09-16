@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(76, 68, 182, 0.15);
+    padding: 40px 32px 32px 32px;
+    width: 95vw;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.todo {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #764ba2;
+    margin-bottom: 18px;
+    border-radius: 2px;
+}
+
+.add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 18px 0;
+}
+
+.image {
+    width: 2.2rem;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.image:hover {
+    transform: scale(1.15) rotate(-10deg);
+}
+
+input {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    outline: none;
+    width: 70%;
+    transition: border 0.2s;
+}
+input:focus {
+    border-color: #764ba2;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: #764ba2;
+}
+
+.todo-container {
+    margin-top: 10px;
+}
+
+.child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    border-radius: 12px;
+    background: #f7f7fb;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.04);
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 12px;
+    font-size: 1.08rem;
+    transition: background 0.2s;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-break: break-word;
+    max-width: 100%;
+    flex: 1 1 auto;
+    margin: 0 8px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+}
+.child.completed, .child .completed {
+    text-decoration: line-through;
+    color: #b0aac2;
+    background: #ece9f7;
+}
+
+.remove {
+    width: 20px;
+    cursor: pointer;
+    filter: grayscale(0.3);
+    transition: filter 0.2s, transform 0.1s;
+}
+.remove:hover {
+    filter: grayscale(0) brightness(1.2);
+    transform: scale(1.2);
+}
+
+.value {
+    color: #764ba2;
+    font-weight: 600;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
